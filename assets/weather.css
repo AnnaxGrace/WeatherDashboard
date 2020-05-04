@@ -1,5 +1,11 @@
 header {
     text-align: center;
     background-color: aqua;
-    font-size: large;
+    font-size: 50px;
+    margin-bottom: 100px;
+    
+}
+
+.cities {
+    background-color: lightgray;
 }
