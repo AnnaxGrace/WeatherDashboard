@@ -9,3 +9,9 @@ header {
 .cities {
     background-color: lightgray;
 }
+
+.styleCard {
+    background-color: skyblue;
+    margin: 0px 5px;
+    float: left;
+}
