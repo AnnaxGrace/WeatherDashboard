@@ -19,11 +19,30 @@ $(".searchBtn").on("click", function(event) {
         
             console.log(response);
 
+            var tempF1 = (response.list[4].main.temp - 273.15) * 1.80 + 32;
+            var tempF2 = (response.list[12].main.temp - 273.15) * 1.80 + 32;
+            var tempF3 = (response.list[20].main.temp - 273.15) * 1.80 + 32;
+            var tempF4 = (response.list[28].main.temp - 273.15) * 1.80 + 32;
+            var tempF5 = (response.list[36].main.temp - 273.15) * 1.80 + 32;
+
             $(".Date1").text(response.list[4].dt_txt);
             $(".Date2").text(response.list[12].dt_txt);
             $(".Date3").text(response.list[20].dt_txt);
             $(".Date4").text(response.list[28].dt_txt);
             $(".Date5").text(response.list[36].dt_txt);
+
+            $(".temp1").text("Temp: " + tempF1.toFixed(2));
+            $(".temp2").text("Temp: " + tempF2.toFixed(2));
+            $(".temp3").text("Temp: " + tempF3.toFixed(2));
+            $(".temp4").text("Temp: " + tempF4.toFixed(2));
+            $(".temp5").text("Temp: " + tempF5.toFixed(2));
+
+            $(".humidity1").text("Humidity: " + response.list[4].main.humidity);
+            $(".humidity2").text("Humidity: " + response.list[12].main.humidity);
+            $(".humidity3").text("Humidity: " + response.list[20].main.humidity);
+            $(".humidity4").text("Humidity: " + response.list[28].main.humidity);
+            $(".humidity5").text("Humidity: " + response.list[36].main.humidity);
+
 
             var newIcon1 = response.list[4].weather[0].icon
             var newIcon1URL = "http://openweathermap.org/img/w/" + newIcon1 + ".png";

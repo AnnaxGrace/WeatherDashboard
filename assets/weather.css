@@ -15,3 +15,11 @@ header {
     margin: 0px 5px;
     float: left;
 }
+
+.container {
+    margin: 0;
+}
+
+.cards {
+    width: 100%;
+}
