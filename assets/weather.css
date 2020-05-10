@@ -23,3 +23,7 @@ header {
 .cards {
     width: 100%;
 }
+
+.headCity {
+    font-size: 30px;
+}

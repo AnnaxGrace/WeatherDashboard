@@ -97,9 +97,8 @@ $(".searchBtn").on("click", function(event) {
         console.log(result);
 
         var tempCurrent = (result.main.temp - 273.15) * 1.80 + 32;
-
-        $(".headCity").text(result.name);
-        console.log(result.name + result.dt);
+        var d = new Date().toLocaleDateString()
+        $(".headCity").text(result.name + "  " + d);
         $(".currentCityTemp").text("Temperature: " + tempCurrent.toFixed(2));
         $(".currentCityHumidity").text("Humidity: " + result.main.humidity);
         $(".currentCityWind").text("Wind Speed: " + result.wind.speed);
